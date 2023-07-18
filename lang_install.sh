@@ -1,5 +1,7 @@
 #!/bin/bash
 
+printf "Hello, $USER! Python3, Rust, Golang will be install now."
+
 echo "Installing Python3"
 sudo apt install -y python3 python3-pip python3-venv
 
