@@ -9,7 +9,7 @@ echo
 
 echo "Installing Rust"
 echo "You need to press Enter"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "$HOME/.cargo/env"
 rustup check
 
