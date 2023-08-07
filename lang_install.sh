@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Hello, $USER! Python3, Rust, Golang will be install now."
+echo "Hello, $USER! Python3, Rust, Golang will be install now."
 
 echo "Installing Python3"
 sudo apt install -y python3 python3-pip python3-venv
@@ -8,7 +8,6 @@ sudo apt install -y python3 python3-pip python3-venv
 echo
 
 echo "Installing Rust"
-echo "You need to press Enter"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "$HOME/.cargo/env"
 rustup check
@@ -17,13 +16,13 @@ echo
 
 echo "Installing Golang"
 cd /tmp
-wget https://go.dev/dl/go1.20.6.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.6.linux-amd64.tar.gz
-echo '' >>  ~/.profile
-echo '# For golang binaries' >> ~/.profile
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
-echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.profile
-source $HOME/.profile
+wget https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go; sudo tar -C /usr/local -xzf go*.tar.gz
+
+echo '\n\n# For golang binaries' >> ~/.zshrc
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.zshrc
+source ~/.zshrc
 rm go*.tar.gz
 cd ~/
 go version
