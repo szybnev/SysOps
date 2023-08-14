@@ -14,4 +14,6 @@ docker run -d -p $addPort:8000 -p $mainPort:9443 --name portainer --restart=alwa
 docker ps
 
 # Show web link
+ip a
+echo
 printf "https://localhost:$mainPort"
