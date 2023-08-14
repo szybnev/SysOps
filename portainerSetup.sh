@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "Hello, $USER! Portainer will be install now."
+echo "Hello, $USER! Portainer will be install now."
 read -p "Enter main port for Portainer: " mainPort
 read -p "Enter additional port for Portainer: " addPort
 
