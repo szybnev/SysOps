@@ -16,7 +16,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install latest version of Docker
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get update; sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Finish
 echo "All done!"
