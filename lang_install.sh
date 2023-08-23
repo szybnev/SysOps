@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Hello, $USER! Python3, Rust, Golang will be install now."
+printf "Hello, $USER! Python3, Rust, Golang will be install now.\n\n"
 
 echo "Installing Python3"
 sudo apt install -y python3 python3-pip python3-venv
@@ -19,9 +19,9 @@ cd /tmp
 wget https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go; sudo tar -C /usr/local -xzf go*.tar.gz
 
-echo '\n\n# For golang binaries' >> ~/.zshrc
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
-echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.zshrc
+printf '\n\n# For golang binaries' >> ~/.zshrc
+printf 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+printf 'export PATH=$PATH:$HOME/go/bin' >> ~/.zshrc
 source ~/.zshrc
 rm go*.tar.gz
 cd ~/
