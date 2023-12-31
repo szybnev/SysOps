@@ -16,7 +16,7 @@ echo
 
 echo "Installing Golang"
 cd /tmp
-wget https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go; sudo tar -C /usr/local -xzf go*.tar.gz
 
 printf '\n\n# For golang binaries' >> ~/.zshrc
